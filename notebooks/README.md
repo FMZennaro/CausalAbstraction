@@ -6,6 +6,10 @@ A series of notebooks containing tutorials, reproduction of work in the literatu
 
 1. **Categorical Abstraction**: A tutorial notebook in which we explore the idea of abstraction between causal models following the framework presented in [Rischel2020] and illustrating the main ideas by replicating (theoretically and experimentally) the examples in Sections 4.11-4.13 of [Rischel2020].
 
+2. **Abstraction Mapping**: A notebook in which we take a closer look at the definition of abstraction between causal models that was presented in [Rischel2020] and reviewed in the previous notebook. Along with the theoretical discussion we also implement classes to encode SCMs and abstractions.
+
+3. **Transformations and Abstractions**: Another tutorial notebook where we consider the concept of transformation and exact transformations from [Rubenstein2017] and we perform a first example-driven comparison between abstractions [Rischel2020] and transformations.
+
 
 ## Disclaimers
 

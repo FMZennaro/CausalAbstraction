@@ -53,3 +53,5 @@ Code, notebooks and resources on the problem of abstraction of structural causal
 [Zennaro2022a] Zennaro, Fabio Massimo, Paolo Turrini, and Theo Damoulas. "Towards Computing an Optimal Abstraction for Structural Causal Models." UAI 2022 Workshop on Causal Representation Learning.
 
 [Zennaro2022b] Zennaro, Fabio Massimo. "Abstraction between Structural Causal Models: A Review of Definitions and Properties." UAI 2022 Workshop on Causal Representation Learning.
+
+[Zennaro2023] Zennaro, Fabio Massimo, et al. "Jointly Learning Consistent Causal Abstractions Over Multiple Interventional Distributions." arXiv preprint arXiv:2301.05893 (2023).
