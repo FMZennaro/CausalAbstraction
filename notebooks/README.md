@@ -10,6 +10,8 @@ A series of notebooks containing tutorials, reproduction of work in the literatu
 
 3. **Transformations and Abstractions**: Another tutorial notebook where we consider the concept of transformation and exact transformations from [Rubenstein2017] and we perform a first example-driven comparison between abstractions [Rischel2020] and transformations.
 
+4. **Automating Abstraction Error**: In this notebook we automate the estimation of abstraction error using the framework introduced in [Rischel2020] and explored in the notebook *Categorical Abstraction*. We implement a function that estimate abstraction error as a function of a chosen evaluation set and metric.
+
 
 ## Disclaimers
 
