@@ -4,11 +4,11 @@ Code, notebooks and resources on the problem of abstraction of structural causal
 
 ## Contents
 
-- **src**: source code for implementing and working with abstractions between SCMs.
+- **src**: up-to-date source code for implementing and working with abstractions between SCMs.
 
 - **notebooks**: collection of notebooks providing introduction, tutorial and reproductions of work in the literature.
 
-- **notebooks**: resources related to specific publications.
+- **papers**: resources related to specific publications.
 
 
 ## Disclaimers
@@ -50,10 +50,10 @@ Code, notebooks and resources on the problem of abstraction of structural causal
 
 [Hoel2017] Hoel, Erik P. "When the map is better than the territory." Entropy 19.5 (2017): 188.
 
-[Zennaro2022a] Zennaro, Fabio Massimo, Paolo Turrini, and Theo Damoulas. "Towards Computing an Optimal Abstraction for Structural Causal Models." UAI 2022 Workshop on Causal Representation Learning.
+[Zennaro2022a] Zennaro, Fabio Massimo, Paolo Turrini, and Theodoros Damoulas. "Towards Computing an Optimal Abstraction for Structural Causal Models." UAI 2022 Workshop on Causal Representation Learning.
 
 [Zennaro2022b] Zennaro, Fabio Massimo. "Abstraction between Structural Causal Models: A Review of Definitions and Properties." UAI 2022 Workshop on Causal Representation Learning.
 
-[Zennaro2023a] Zennaro, Fabio Massimo, et al. "Jointly Learning Consistent Causal Abstractions Over Multiple Interventional Distributions." arXiv preprint arXiv:2301.05893 (2023).
+[Zennaro2023a] Zennaro, Fabio Massimo, Máté Drávucz, Geanina Apachitei, W. Dhammika Widanage, Theodoros Damoulas. "Jointly Learning Consistent Causal Abstractions Over Multiple Interventional Distributions." CleaR 2023.
 
-[Zennaro2023b] Zennaro, Fabio Massimo, Paolo Turrini, and Theo Damoulas. "Quantifying Consistency and Information Loss for Causal Abstraction Learning."
+[Zennaro2023b] Zennaro, Fabio Massimo, Paolo Turrini, and Theodoros Damoulas. "Quantifying Consistency and Information Loss for Causal Abstraction Learning." IJCAI 2023.
