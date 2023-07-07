@@ -10,6 +10,8 @@ Code, notebooks and resources on the problem of abstraction of structural causal
 
 - **papers**: resources related to specific publications.
 
+- **legacy**: legacy code required to run some notebooks.
+
 
 ## Disclaimers
 

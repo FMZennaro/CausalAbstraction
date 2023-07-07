@@ -288,7 +288,6 @@ def jsd(p,q):
             [.1,.8]];
         jsd = [0.,0.364].
     """
-    if np.allclose(p,q, rtol=0, atol=1e-08): return 0
     jsd = np.sqrt(.5*np.sum(kl_div(p,(p+q)/2),axis=0) + .5*np.sum(kl_div(q,(p+q)/2),axis=0))
     return jsd
 

@@ -49,7 +49,7 @@ class Abstraction(SCMMapping):
         for k in alphas.keys():
             card_domain,card_codomain = self.get_cardinalities_alpha(k)
             if card_domain != alphas[k].shape[1]: raise ValueError("Alpha_{0} domain is misspecified".format(k))
-            if card_codomain != alphas[k].shape[0]: raise ValueError("Alpha_{0} codomain is misspecified".format(k))
+            if card_codomain != alphas[k].shape[0]: raise ValueError("Alpha_{0} codomain is misspecified {1} {2}".format(k,card_codomain,alphas[k].shape[0]))
                 
     def _are_alphas_stochastic_and_deterministic(self,alphas,determinism):
         for k in alphas.keys():
@@ -121,36 +121,6 @@ class Abstraction(SCMMapping):
     def get_cardinalities_alpha(self,alphakey):
         return ut.get_cardinalities_Falpha(self.a,alphakey,self.M0.get_cardinality(),self.M1.get_cardinality())
             
-    def compute_mechanisms(self,M,sources,targets):
-        #Compute P(targets|do(sources)) as P(targets|sources) in M_do(sources)
-        
-        # Perform interventions in the abstracted model and setup the inference engine
-        Mdo = M.do(sources)
-        inference = VariableElimination(Mdo)
-        
-        #Compute P(targets|sources) as P(targets,sources)/P(sources)
-        joint_TS = inference.query(targets+sources,show_progress=False)
-        marginal_S = inference.query(sources,show_progress=False)
-        cond_TS = joint_TS / marginal_S
-        
-        #Get the values of P
-        cond_TS_val = cond_TS.values
-
-        #Order the values according to targets and sources
-        old_indexes = range(len(targets+sources))
-        new_indexes = [(targets+sources).index(i) for i in joint_TS.variables]
-        cond_TS_val = np.moveaxis(cond_TS_val, old_indexes, new_indexes)
-
-        #Reshape the matrix as [targets x sources]
-        cardinalities = M.get_cardinality()
-        target_cards=[cardinalities[t] for t in targets]
-        target_card = np.prod(target_cards)
-        source_cards=[cardinalities[s] for s in sources]
-        source_card = np.prod(source_cards)
-        cond_TS_val = cond_TS_val.reshape(target_card,source_card)
-
-        return cond_TS_val
-    
     def compute_abstractions(self,alphakeys):
         alphas = [self.alphas[i] for i in alphakeys]
         return ut.tensorize_list(None,alphas)
@@ -184,8 +154,11 @@ class Abstraction(SCMMapping):
         joint_M0 = joint_M0.reshape((np.prod(joint_M0.shape),1))
         if verbose: print('M0 joint: {0}'.format(joint_M0))
         
-        inferM1 = VariableElimination(self.M1)
-        joint_M1 = inferM1.query(orderingM1,show_progress=False)
+        if (len(self.M1.nodes)==1 and self.M1.get_cardinality(orderingM1[0])==1):
+            joint_M1 = self.M1.get_cpds(orderingM1[0])
+        else:
+            inferM1 = VariableElimination(self.M1)
+            joint_M1 = inferM1.query(orderingM1,show_progress=False)
         
         old_indexes = range(len(orderingM1))
         new_indexes = [(orderingM1).index(i) for i in joint_M1.variables]
