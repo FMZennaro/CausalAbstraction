@@ -4,9 +4,11 @@ Code, notebooks and resources on the problem of abstraction of structural causal
 
 ## Contents
 
+- **notebooks**: collection of notebooks providing introduction, tutorial and reproductions of work in the literature.
+
 - **src**: up-to-date source code for implementing and working with abstractions between SCMs.
 
-- **notebooks**: collection of notebooks providing introduction, tutorial and reproductions of work in the literature.
+- **tutorials**: notebooks illustrating how to use the source code for custom problems.
 
 - **papers**: resources related to specific publications.
 
