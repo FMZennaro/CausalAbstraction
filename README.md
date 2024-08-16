@@ -61,3 +61,9 @@ Code, notebooks and resources on the problem of abstraction of structural causal
 [Zennaro2023a] Zennaro, Fabio Massimo, Máté Drávucz, Geanina Apachitei, W. Dhammika Widanage, Theodoros Damoulas. "Jointly Learning Consistent Causal Abstractions Over Multiple Interventional Distributions." CleaR 2023.
 
 [Zennaro2023b] Zennaro, Fabio Massimo, Paolo Turrini, and Theodoros Damoulas. "Quantifying Consistency and Information Loss for Causal Abstraction Learning." IJCAI 2023.
+
+[Dyer2023] Dyer, Joel, Nicholas Bishop, Yorgos Felekis, Fabio Massimo Zennaro, Anisoara Calinescu, Theodoros Damoulas, and Michael Wooldridge. "Interventionally Consistent Surrogates for Agent-based Simulators." arXiv preprint arXiv:2312.11158 (2023).
+
+[Felekis2024] Felekis, Yorgos, Fabio Massimo Zennaro, Nicola Branchini, and Theodoros Damoulas. "Causal optimal transport of abstractions." CleaR 2024.
+
+[Zennaro2024] Zennaro, Fabio Massimo, Nicholas Bishop, Joel Dyer, Yorgos Felekis, Anisoara Calinescu, Michael Wooldridge, and Theodoros Damoulas. "Causally abstracted multi-armed bandits." UAI 2024.
